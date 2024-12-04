@@ -270,7 +270,7 @@
       // Allow people to download the exploit page to manually set target IP,
       // in case direct on-tv deployment fails for some reason.
       var target = is_local ? prompt('Enter IP address of Your TV') : '127.0.0.1';
-      bootstrap(target, new URL('itsrealm12c.github.io/onlinewebosapplauncher', ORIGIN_URL).href);
+      bootstrap(target, new URL('owal.html', ORIGIN_URL).href);
     }
 
     // listen for "5" key to be pressed
