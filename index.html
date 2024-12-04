@@ -280,6 +280,13 @@
       }
     });
 
+     // listen for "1" key to be pressed
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode === 49) {
+        begin_exploit();
+      }
+    });
+
     document.querySelector('.click-here').addEventListener('click', function (event) {
       begin_exploit();
     });
