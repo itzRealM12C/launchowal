@@ -262,33 +262,7 @@
       var is_local = window.location.protocol === 'file:';
 
       if (!is_local && !is_webos) {
-        log("[Warning] You should be visiting this page from a webOS device, not your <script>const getDevice = () => {
-  const touch = navigator.maxTouchPoints > 0;
-  const w = screen.width;
-  const h = screen.height;
-  const ua = navigator.userAgent.toLowerCase();
-
-  // Smart fridge detection (Samsung Tizen)
-  if (/tizen|smart-tv|smartfridge|fridge/i.test(ua)) return "smart fridge";
-
-  // Smartwatch (tiny touchscreen)
-  if (touch && Math.max(w, h) <= 400) return "smartwatch";
-
-  // Phone (small touchscreen)
-  if (touch && w < 600) return "phone";
-
-  // Tablet (medium touchscreen)
-  if (touch && w <= 1024) return "tablet";
-
-  // Laptop (clamshell form factor hint)
-  if (ua.match(/macintosh|windows nt|linux/) && !touch && w > 1024) return "laptop";
-        
-  // Desktop (large non-touch)
-  if (w > 1024) return "desktop";
-
-  // Fallback
-  return "unknown device";
-        </script>};
+        log("[Warning] You should be visiting this page from a webOS device, not your different device! "};)
 
       }
 
