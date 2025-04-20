@@ -261,19 +261,21 @@
 
       var is_local = window.location.protocol === 'file:';
 
-      const is_webos = /webOS|LG Browser|SmartTV|TV/.test(navigator.userAgent);
-const is_local = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-const device = 
-  /smart-tv|tv|webos|smarttv/i.test(navigator.userAgent) ? "webOS TV" :
-  navigator.maxTouchPoints && screen.width <= 400 ? "smartwatch" :
-  navigator.maxTouchPoints && screen.width < 600 ? "phone" :
-  navigator.maxTouchPoints && screen.width <= 1024 ? "tablet" :
-  /macintosh|windows|linux/i.test(navigator.userAgent) ? "laptop/PC" :
-  "unknown device";
+      (function() {
+    const is_webos = /webOS|LG Browser|SmartTV|TV/i.test(navigator.userAgent);
+    const is_local = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    const device = 
+      /smart-tv|tv|webos|smarttv/i.test(navigator.userAgent) ? "webOS TV 📺" :
+      navigator.maxTouchPoints && screen.width <= 400 ? "smartwatch ⌚" :
+      navigator.maxTouchPoints && screen.width < 600 ? "phone 📱" :
+      navigator.maxTouchPoints && screen.width <= 1024 ? "tablet 📱" :
+      /macintosh|windows|linux/i.test(navigator.userAgent) ? "laptop/PC 💻" :
+      "unknown device";
 
-if (!is_local && !is_webos) {
-  console.log(`[Warning] You should be visiting this page from a webOS device, not your ${device}.");
-      
+    if (!is_local && !is_webos) {
+        console.log(`[Warning] You should be visiting this page from a webOS device, not your ${device}.`);
+    }
+})();
 }
       }
 
