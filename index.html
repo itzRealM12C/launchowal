@@ -262,7 +262,7 @@
       var is_local = window.location.protocol === 'file:';
 
       if (!is_local && !is_webos) {
-        log("[Warning] You should be visiting this page from a webOS device, not your const getDevice = () => {
+        log("[Warning] You should be visiting this page from a webOS device, not your <script>const getDevice = () => {
   const touch = navigator.maxTouchPoints > 0;
   const w = screen.width;
   const h = screen.height;
@@ -288,7 +288,7 @@
 
   // Fallback
   return "unknown device";
-};
+        </script>};
 
       }
 
